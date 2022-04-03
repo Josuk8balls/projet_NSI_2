@@ -1,6 +1,6 @@
 # Projet_NSI_2
 
-# Simulation physique avec Python
+# Simulation physique
 
 Une simulation physique visualisable et compréhensible réalisée avec python
 
