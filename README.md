@@ -19,7 +19,17 @@ Et peut-être une simulation d'un phénomène plus complexe en 3D, avec un autre
 étape 3 : Visualiser l'objet
 
 -------------------------------------------------------------------------------------------------------------------
-
+fonction à créer:
+  - Objets (sujet/incidents) :
+    - apparence
+    - mouvment/vitesse
+    - interaction
+    - poid
+  -plan (milieu) :
+    - matrix
+    - pensenteur
+    
+-------------------------------------------------------------------------------------------------------------------
 
 
 " Pygame gaming creation was very cool and very funny
