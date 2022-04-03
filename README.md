@@ -25,7 +25,7 @@ fonction à créer:
     - mouvment/vitesse
     - interaction
     - poid
-  -plan (milieu) :
+  - plan (milieu) :
     - matrix
     - pensenteur
     
