@@ -19,7 +19,7 @@ Et peut-être une simulation d'un phénomène plus complexe en 3D, avec un autre
 étape 3 : Visualiser l'objet
 
 -------------------------------------------------------------------------------------------------------------------
-fonction à créer:
+attribue / méthode:
   - Objets (sujet/incidents) :
     - apparence
     - mouvment/vitesse
