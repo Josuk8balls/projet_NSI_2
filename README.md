@@ -24,10 +24,10 @@ attribue / méthode:
     - apparence
     - mouvment/vitesse
     - interaction
-    - poid
+    - poids
   - Plan (milieu) :
-    - matrix
-    - pensenteur
+    - matrice
+    - pensanteur
     
 -------------------------------------------------------------------------------------------------------------------
 
