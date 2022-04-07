@@ -9,6 +9,10 @@ En commençant par un événement simple comme la trajectoire d'une balle tirée
 Et peut-être une simulation d'un phénomène plus complexe en 3D, avec un autre langage de programmation plus tard
 
 
+-------------------------------------------------------------------------------------------------------------------
+Version 1.0 :
+
+Une bille que est en chute libre dans un milieu, c'est un petit pas pour lui mais un grand pas pour moi :) 
 
 
 -------------------------------------------------------------------------------------------------------------------
