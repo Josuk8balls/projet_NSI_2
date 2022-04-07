@@ -45,4 +45,8 @@ Let's keep the digital world pure :> "
 -------------------------------------------------------------------------------------------------------------------
 Version 1.0 :
 
-Une bille que est en chute libre dans un milieu, c'est un petit pas pour lui mais un grand pas pour moi :) 
+Un ballon que est en chute libre dans un milieu, c'est un petit pas pour lui mais un grand pas pour moi :) 
+Définir un objet "ballon" ->
+  fonction utiliser : math
+  ses attributs : self,ball
+  ses méthodes : free_fall
