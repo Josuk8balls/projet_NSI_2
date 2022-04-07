@@ -2,6 +2,10 @@
 
 01/04/2022 : it's a trap lol
 
-02/04/2022 : pas grand chose
-
 03/04/2022 : terminer l'étape d'initialisation
+
+04/04/2022 : première évaluation
+
+06/04/2022 : définir un MVP
+
+08/04/2022 : prototypage
