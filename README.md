@@ -49,8 +49,8 @@ Un ballon que est en chute libre dans un milieu, c'est un petit pas pour lui mai
 
 Définir une fonction "ballon"
   
-    fonctions utiliser : math,pylab
+   fonctions utiliser : math,pygame
   
-    ses attributs : self,ball
-  
-    ses méthodes : free_fall
+   ses attributs : self,ball
+ 
+   ses méthodes : free_fall
