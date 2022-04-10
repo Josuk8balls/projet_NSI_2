@@ -18,7 +18,7 @@ Et peut-être une simulation d'un phénomène plus complexe en 3D, avec un autre
 étape 3 : Visualiser l'objet
 
 -------------------------------------------------------------------------------------------------------------------
-attribue / méthode:
+fonctions générales :
   - Objets (sujet/incidents) :
     - apparence
     - mouvment/vitesse
