@@ -9,3 +9,5 @@
 06/04/2022 : définir un MVP
 
 08/04/2022 : prototypage
+
+10/04/2022 : finalisation du MVP
