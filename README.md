@@ -11,22 +11,13 @@ Et peut-être une simulation d'un phénomène plus complexe en 3D, avec un autre
 
 
 -------------------------------------------------------------------------------------------------------------------
-étape 1 : Créer un objet (le sujet du simulation choisi) dans un milieu
 
-étape 2 : Implémenter un équation au sujet pour que l'objet soit en mouvement
+Créer un objet (le sujet du simulation) avec des conditions initiales implémentées
 
-étape 3 : Visualiser l'objet
+Soumettre des incidents au sujet par unité de temps pour que l'objet modifie son trajectoire
 
--------------------------------------------------------------------------------------------------------------------
-fonctions générales :
-  - Objets (sujet/incidents) :
-    - apparence
-    - mouvment/vitesse
-    - interaction
-    - poids
-  - Plan (milieu) :
-    - matrice
-    - pensanteur
+visualiser l'objet, son trajectoire, et les indicents qu'il subit
+
     
 -------------------------------------------------------------------------------------------------------------------
 
@@ -43,6 +34,7 @@ Let's keep the digital world pure :> "
 
 
 -------------------------------------------------------------------------------------------------------------------
+
 Version 1.0 :
 
 Un ballon que est en chute libre dans un milieu, c'est un petit pas pour lui mais un grand pas pour moi :) 
