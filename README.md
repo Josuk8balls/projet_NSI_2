@@ -55,7 +55,7 @@ Définir une classe "ballon"( masse : float ; vitesse : float ; position_x : int
   
   class ballon : 
   
-   def self
+    def self
  
-   def free_fall() ; trajectoire()
+    def free_fall() ; trajectoire()
 
