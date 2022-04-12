@@ -1,11 +1,12 @@
 import math
 import matplotlib.pyplot as plt
  
+m=int(input("masse :"))
+v0=int(input("vitesse initiale :"))
+g=int(input("pesanteur :"))
+k=int(input("altitude :"))
+
 def eqa_dx(angle):
-    m=1
-    v0=100
-    g=9.8
-    k=0.3
     alpha = angle*math.pi/180
     v0x=v0*math.cos(alpha)
     v0y=v0*math.sin(alpha)
