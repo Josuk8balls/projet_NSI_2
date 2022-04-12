@@ -11,3 +11,5 @@
 08/04/2022 : prototypage
 
 10/04/2022 : finalisation du MVP
+
+12/04/2022 : version 1
