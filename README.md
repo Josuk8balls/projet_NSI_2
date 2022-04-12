@@ -39,15 +39,19 @@ Version 1.0 :
 
 Un ballon que est en chute libre dans un milieu, c'est un petit pas pour lui mais un grand pas pour moi :) 
 
-Définir une classe "ballon"( masse : float ; vitesse : float ; position_x : int ; position_y : int ) -> coordonnée : float ; trajectoire : list 
+Classe "ballon" :
+
+    masse : float
+    
+    vitesse : float
+    
+    position_x : int 
+    
+    position_y : int 
+    
+        -> coordonnée : float 
+        
+           trajectoire : list 
      
 " A partir des facteurs cinétique et des conditions initiales, établir une trajectoire de chute libre, d'abore dans le plot, puis en pygame. "
-   
-   fonctions utiliser : math,pygame
-  
-  class ballon : 
-  
-    def self
- 
-    def free_fall() ; trajectoire()
 
