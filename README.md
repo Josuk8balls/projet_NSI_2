@@ -49,9 +49,9 @@ Classe "ballon" :
     
     position_y : int 
     
-        -> coordonnée : float 
+        >>> coordonnée : float 
         
-           trajectoire : list 
+        >>> trajectoire : list 
      
 " A partir des facteurs cinétique et des conditions initiales, établir une trajectoire de chute libre, d'abore dans le plot, puis en pygame. "
 
