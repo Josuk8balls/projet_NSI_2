@@ -21,6 +21,16 @@ visualiser l'objet, son trajectoire, et les indicents qu'il subit
     
 -------------------------------------------------------------------------------------------------------------------
 
+Composition envisager :
+  
+  fonction trajectoire pour calculer la trajectoire de l'objet en mouvement
+  
+  fonction interaction pour calculer les diffèrents obstacles que subissent l'objet
+  
+  fonction animation pour mettre l'évolution du trajectoire en animation
+
+-------------------------------------------------------------------------------------------------------------------
+
 
 " Pygame gaming creation was very cool and very funny
 
