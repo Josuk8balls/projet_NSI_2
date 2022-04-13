@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 m=int(input("masse :"))
 v0=int(input("vitesse initiale :"))
 g=float(input("pesanteur :"))
-k=int(input("primitive :"))
+k=int(input("taux :"))
 
 def eqa_dx(angle):
     alpha = angle*math.pi/180
