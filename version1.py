@@ -25,7 +25,7 @@ def eqa_dx(angle):
  
 xx = []
 yy = []
-for i in range(10,80,5):
+for i in range(0,100,10):
     xx.append(i)
     yy.append(eqa_dx(i))
  
