@@ -39,19 +39,19 @@ Version 1.0 :
 
 Un ballon que est en chute libre dans un milieu, c'est un petit pas pour lui mais un grand pas pour moi :) 
 
-Classe "ballon" :
+fonction trajectoire :
 
-    masse : float
+    masse : int
     
-    vitesse : float
+    vitesse : int
     
-    position_x : int 
+    pesenteur : float
     
-    position_y : int 
+    angle : int 
     
-        >>> coordonnée : float 
+        >>> position_x : float
         
-        >>> trajectoire : list 
+        >>> position_y : float 
      
-" A partir des facteurs cinétique et des conditions initiales, établir une trajectoire de chute libre, d'abore dans le plot, puis en pygame. "
+" A partir des facteurs cinétique et des conditions initiales, établir une trajectoire de chute libre, dans le plot. "
 
