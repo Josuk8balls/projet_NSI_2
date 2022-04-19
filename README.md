@@ -45,23 +45,11 @@ Let's keep the digital world pure :> "
 
 -------------------------------------------------------------------------------------------------------------------
 
-Version 1.0 :
+Version 1.1 :
 
 Un ballon que est en chute libre dans un milieu, c'est un petit pas pour lui mais un grand pas pour moi :) 
 
-fonction trajectoire :
 
-    masse : int
-    
-    vitesse : int
-    
-    pesenteur : float
-    
-    angle : int 
-    
-        >>> position_x : float
-        
-        >>> position_y : float 
      
 " A partir des facteurs cinétique et des conditions initiales, établir une trajectoire de chute libre, dans le plot. "
 
