@@ -1,0 +1,79 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 22 10:12:54 2022
+
+@author: vanes
+"""
+
+# Modélisation du mouvement d'un pendule pesant
+
+
+import matplotlib.pyplot as plt
+
+# Définition des listes de variables temps t, abscisse x et ordonnée y
+""" ICI !! recopier les valeurs """
+t= [0,0.04,0.08,0.12,0.16,0.2,0.24,0.28,0.32,0.36,0.4,0.44,0.48,0.52,0.56,0.60
+    ,0.64,0.68,0.72]
+x = [0.303,0.303,0.301,0.284,0.264,0.241,0.209,0.173,0.132,0.0867,0.0467,
+     -0.00533,-0.0493,-0.0907,-0.135,-0.171,-0.203,-0.244,-0.255]
+
+y=[0.072,0.0707,0.0627,0.06,0.0493,0.048,0.0333,0.0253,0.0187,0.00533,0.004,
+   0.00933,0.008,0.0107,0.024,0.028,0.048,0.064,0.06,]
+
+""" ICI !! completer les valeurs """
+m = 200
+g = 9.81
+
+vx=[]
+vy=[]
+Ec=[]
+Epp=[]
+Em=[]
+
+
+
+""" ICI !! coder les instructions """
+# valeur de l'intervalle de temps entre 2 mesures
+dt= 0.04
+
+# Calcul des coordonnées des vecteurs vitesse 
+for i in range(1, len(x)-1) :
+    deltax = x[i+1] - x[i-1]
+    vx.append(deltax/(2*dt))
+    deltay = y[i+1] - y[i-1]
+    vy.append(deltay/(2*dt))
+    
+
+""" ICI !! coder l'instruction pour le calcul des energies"""
+# Ec = []
+for i in range(len(vx)) :
+    Eci = (1/2)* m *(vx[i]**2 + vy[i]**2)
+    Ec.append(Eci)
+
+for i in range(1, len(y)-1) :
+    Epi = m * g * y[i]
+    Epp.append(Epi)
+
+for i in range(0, len(Ec)):
+    # range(min(len(Ec),len(Epp)))
+    Emi = Ec[i] + Epp[i]
+    Em.append(Emi)
+    
+#for i in range(1, len(t)-1):
+## Temps sans derniere mesure
+#	tt.append(t[i])
+    
+tt = t[1:-1]
+
+# Tracé de la courbe représentant la trajectoire du pendule y en fonction de x
+
+
+plt.plot(tt,Ec, label = "Ec")
+plt.plot(tt,Epp, label = "Epp")
+plt.plot(tt,Em, label = "Em")
+
+plt.grid()
+plt.xlabel("temps en secondes")
+plt.ylabel("énergie en joules")
+plt.legend()
+plt.show()
