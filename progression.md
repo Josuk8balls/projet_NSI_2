@@ -19,3 +19,7 @@
 18/04/2022 : just did 1 of the 1024 ways to improve it
 
 19/04/2022 : v1.1
+
+23/04/2022 : start a version 1.2 thanks to physics exams review
+
+28/04/2022 : welcome v1.2
