@@ -1,17 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 22 10:12:54 2022
-
-@author: vanes
-"""
-
 # Modélisation du mouvement d'un pendule pesant
 
 
 import matplotlib.pyplot as plt
 
 # Définition des listes de variables temps t, abscisse x et ordonnée y
-""" ICI !! recopier les valeurs """
+
 t= [0,0.04,0.08,0.12,0.16,0.2,0.24,0.28,0.32,0.36,0.4,0.44,0.48,0.52,0.56,0.60
     ,0.64,0.68,0.72]
 x = [0.303,0.303,0.301,0.284,0.264,0.241,0.209,0.173,0.132,0.0867,0.0467,
@@ -20,7 +13,6 @@ x = [0.303,0.303,0.301,0.284,0.264,0.241,0.209,0.173,0.132,0.0867,0.0467,
 y=[0.072,0.0707,0.0627,0.06,0.0493,0.048,0.0333,0.0253,0.0187,0.00533,0.004,
    0.00933,0.008,0.0107,0.024,0.028,0.048,0.064,0.06,]
 
-""" ICI !! completer les valeurs """
 m = 200
 g = 9.81
 
@@ -31,8 +23,6 @@ Epp=[]
 Em=[]
 
 
-
-""" ICI !! coder les instructions """
 # valeur de l'intervalle de temps entre 2 mesures
 dt= 0.04
 
@@ -44,7 +34,7 @@ for i in range(1, len(x)-1) :
     vy.append(deltay/(2*dt))
     
 
-""" ICI !! coder l'instruction pour le calcul des energies"""
+""" calcul des energies"""
 # Ec = []
 for i in range(len(vx)) :
     Eci = (1/2)* m *(vx[i]**2 + vy[i]**2)
