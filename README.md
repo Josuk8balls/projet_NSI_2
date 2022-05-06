@@ -50,3 +50,10 @@ Version 1.1 :
 Un ballon que est en chute libre dans un milieu, c'est un petit pas pour lui mais un grand pas pour moi :) 
 
 Amélioration du projet : à partir des facteurs cinétique et des conditions initiales, établir une trajectoire de chute libre en déterminant les position de la balle par unité de temps, dans le plot. 
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Version 2.1 :
+
+analyser une trajectoire d'une pendulle en mouvement pur trouver sa variation de force mécanique
