@@ -56,4 +56,13 @@ Amélioration du projet : à partir des facteurs cinétique et des conditions in
 
 Version 2.1 :
 
-analyser une trajectoire d'une pendulle en mouvement pur trouver sa variation de force mécanique
+simuler plusieurs trajectoires des objets dans un champs de pesenteur avec pygame
+
+-------------------------------------------------------------------------------------------------------------------
+
+Version 3.0 :
+
+simulation d'une pendule simple, puis d'une pendule double (système chaotique)
+
+
+-------------------------------------------------------------------------------------------------------------------
