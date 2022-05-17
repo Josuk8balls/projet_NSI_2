@@ -1,68 +1,137 @@
-# Modélisation du mouvement d'un pendule pesant
+
+import pygame
+
+global G, PI
+G = 6.754*0.00001
+PI = 3.14159265358979323
 
 
-import matplotlib.pyplot as plt
+class System(object):
+    name = ""
+    objects = []
 
-# Définition des listes de variables temps t, abscisse x et ordonnée y
+    def __init__(self, name):
+        self.name = name
 
-t= [0,0.04,0.08,0.12,0.16,0.2,0.24,0.28,0.32,0.36,0.4,0.44,0.48,0.52,0.56,0.60]
-x = [0.303,0.303,0.301,0.284,0.264,0.241,0.209,0.173,0.132,0.0867,0.0467,
-     -0.00533,-0.0493,-0.0907,-0.135,-0.171]
+    def add_object(self, obj):
+        self.objects.append(obj)
 
-y=[0.072,0.0707,0.0627,0.06,0.0493,0.048,0.0333,0.0253,0.0187,0.00533,0.004,
-   0.00933,0.008,0.0107,0.024,0.028]
+    def travail_force(self):
+        for obj in self.objects:
+            obj.force = []
+            if obj.speed == [0, 0]:
+                pass
+            else:
+                obj.speed[0] = obj.speed[0] * obj.mass
+                obj.speed[1] = obj.speed[1] * obj.mass
+                obj.force.append(obj.speed)
+            for o in self.objects:
+                v0 = o.position[0] - obj.position[0]
+                v1 = o.position[1] - obj.position[1]
+                distance_2 = v0 ** 2 + v1 ** 2
+                if distance_2 == 0:
+                    pass
+                else:
+                    v0 *= G/distance_2*(obj.mass*o.mass)
+                    v1 *= G/distance_2*(obj.mass*o.mass)
+                    obj.force.append([v0, v1])
 
-m = 200
-g = 9.81
+    def travail_power(self):
+        for obj in self.objects:
+            for n in range(len(obj.force) - 1):
+                f1 = obj.force[0]
+                f2 = obj.force[1]
+                f_t = [f1[0]+f2[0], f1[1]+f2[1]]
+                del obj.force[0]
+                del obj.force[0]
+                obj.force.append(f_t)
+            obj.position[0] += obj.force[0][0]/obj.mass
+            obj.position[1] += obj.force[0][1]/obj.mass
+            obj.speed = [obj.force[0][0]/obj.mass, obj.force[0][1]/obj.mass]
+            # print(obj.speed)
 
-vx=[]
-vy=[]
-Ec=[]
-Epp=[]
-Em=[]
+    def display(self, scr, show_orbit, length=500):
+        for obj in self.objects:
+            pygame.draw.circle(scr, obj.color, (int(obj.position[0]), int(obj.position[1])), obj.volume)
+            if show_orbit:
+                obj.positions = obj.positions[:]
+                obj.positions.insert(0, [int(obj.position[0]), int(obj.position[1])])
+                pygame.draw.aalines(scr, obj.color, False, obj.positions, 3)
+                if len(obj.positions) > length:
+                    del obj.positions[-1]
+                elif len(obj.positions) > len(self.objects):
+                    if obj.position_ in obj.positions:
+                        for n in range(len(self.objects)):
+                            del obj.positions[-1]
 
-
-# valeur de l'intervalle de temps entre 2 mesures
-dt= 0.04
-
-# Calcul des coordonnées des vecteurs vitesse 
-for i in range(1, len(x)-1) :
-    deltax = x[i+1] - x[i-1]
-    vx.append(deltax/(2*dt))
-    deltay = y[i+1] - y[i-1]
-    vy.append(deltay/(2*dt))
-    
-
-""" calcul des energies"""
-# Ec = []
-for i in range(len(vx)) :
-    Eci = (1/2)* m *(vx[i]**2 + vy[i]**2)
-    Ec.append(Eci)
-
-for i in range(1, len(y)-1) :
-    Epi = m * g * y[i]
-    Epp.append(Epi)
-
-for i in range(0, len(Ec)):
-    # range(min(len(Ec),len(Epp)))
-    Emi = Ec[i] + Epp[i]
-    Em.append(Emi)
-    
-#for i in range(1, len(t)-1):
-## Temps sans derniere mesure
-#	tt.append(t[i])
-    
-tt = t[1:-1]
-
-# Tracé de la courbe représentant la trajectoire du pendule y en fonction de x
+    def display_data(self, scr, c):
+        font = pygame.font.SysFont("Consolas", 25)
+        fps = font.render("FPS: "+str(round(c.get_fps(), 2)), False, (255, 255, 255))
+        scr.blit(fps, (50, 50))
+        if self.objects:
+            for index, obj in enumerate(self.objects):
+                pos = font.render(obj.name+": "+str(int(obj.position[0])) + "  " +
+                                  str(int(obj.position[1])), False, (255, 255, 255))
+                scr.blit(pos, (50, 80+index*35))
 
 
-plt.plot(tt,Ec, label = "Ec")
-plt.plot(tt,Epp, label = "Epp")
-plt.plot(tt,Em, label = "Em")
+class Objects(object):
+    mass = 0        # masse
+    force = []      # vecteur force
+    speed = []      # vecteur vitesse
+    position = []   # position
+    position_ = []  # postition initiale
+    move_to = []    # prochain mouvement
+    positions = []  # touts les positions
+    volume = 0
+    color = []
+    name = ""  
 
-plt.grid()
-plt.xlabel("temps en secondes")
-plt.ylabel("énergie en joules")
-plt.legend()
-plt.show()
+    def __init__(self, name, mass, speed, position, volume, color):
+        self.mass = mass
+        self.position = position
+        self.volume = volume
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.positions.append(position[:])
+        self.position_ = position[:]
+
+
+univers = System("Earth University")
+
+earth = Objects("Earth", 1000, [0, 0], [200, 200], 5, [0, 0, 255])
+sun = Objects("Sun", 1000, [0, 0], [500, 600], 5, [255, 255, 0])
+moon = Objects("Moon", 1000, [0, 0], [500, 300], 5, [255, 255, 255])
+mars = Objects("Mars", 1000, [0, 0], [600, 400], 5, [255, 0, 0])
+
+univers.add_object(earth)
+univers.add_object(sun)
+univers.add_object(moon)
+univers.add_object(mars)
+
+univers.travail_force()
+univers.travail_power()
+
+pygame.init()
+clock = pygame.time.Clock()
+screen = pygame.display.set_mode([1000, 800])
+pygame.display.set_caption("Force")
+
+keep = True
+while keep:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            keep = False
+
+    screen.fill((0, 0, 0))
+
+    univers.travail_force()
+    univers.travail_power()
+    univers.display(screen, True)
+    univers.display_data(screen, clock)
+
+    pygame.display.update()
+    clock.tick(200)
+
+pygame.quit()
