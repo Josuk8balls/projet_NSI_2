@@ -20,6 +20,12 @@
 
 19/04/2022 : v1.1
 
-23/04/2022 : start a version 1.2 thanks to physics exams review
+23/04/2022 : start a version 2.0 thanks to physics exams review
 
-28/04/2022 : welcome v1.2
+28/04/2022 : doing v2.0
+
+11/05/2022 : welcome v2.0
+
+13/05/2022 : now our sta is not alone any more, welcome v2.1
+
+14/05/2022 : oh v3.0 just for fun
